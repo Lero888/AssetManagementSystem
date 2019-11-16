@@ -1,0 +1,29 @@
+﻿
+body {
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ff0000;
+}
+
+.nav-header 
+{
+    float: right;
+}
+
+.nav navbar-nav navbar-left > li > a
+{
+    justify-content: left;
+    color: #FFFFFF;
+}
+
+.nav navbar-nav navbar-right > li > a
+{
+    float: right;
+    color: #FFFFFF;
+}
