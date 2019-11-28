@@ -144,3 +144,10 @@ textarea {
     border: 1px solid #d1dfdf;
     background: #d1dfdf;
 }
+
+/*---------------Row And Column Centered------------*/
+/* centered columns styles */
+justify-content-center {
+    display: flex;
+    justify-content: center;
+}

@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AssetManagementSystem.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoginHeaderFooter.master.cs" Inherits="AssetManagementSystem.LoginHeaderFooter" %>
 
 <!DOCTYPE html>
 
@@ -19,14 +19,13 @@
         .auto-style1 {
             width: 100px;
             height: 28px;
+            margin-top: 5px;
         }
 
-        #all-header {
-            padding-bottom: 10px;
-        }
-
-        #nav-title, #nav-title2 li {
-            padding-top: 5px;
+        #login-logo {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
         }
     </style>
 
@@ -53,28 +52,12 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #02234E;">
-            <div id="all-header" class="container">
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #02234E">
+            <div id="login-logo" class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" runat="server" href="~/">
                         <img src="Images/logo.png" class="auto-style1" />                        
                     </a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul id="nav-title" class="nav navbar-nav navbar-left">
-                        <li><a runat="server" href="~/" style="color: #FFFFFF;">Booking Status</a></li>
-                        <li><a runat="server" href="ItemBorrow.aspx" style="color: #FFFFFF;">Item Booking</a></li>
-                        <li><a runat="server" href="ClassroomReservation.aspx" style="color: #FFFFFF;">Classroom Reservation</a></li>
-                    </ul>
-                    <ul id="nav-title2" class="nav navbar-nav navbar-right">
-                        <li><a runat="server" style="color: #FFFFFF;">Hello, <%=Session["Username"] %></a></li>
-                        <li><a runat="server" href="~/Contact" style="color: #FFFFFF;">Logout</a></li>
-                    </ul>
                 </div>
             </div>
         </div>
