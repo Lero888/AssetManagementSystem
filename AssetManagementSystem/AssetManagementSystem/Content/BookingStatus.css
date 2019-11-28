@@ -1,0 +1,32 @@
+﻿body {
+}
+
+.booking-container {
+    float: left;
+}
+
+booking-container #left, #right {
+    width: 25%;
+}
+
+booking-container #middle {
+    width: 50%;
+}
+
+/*booking-container left {
+    order: 1;
+}
+
+booking-container middle {
+    order: 2;
+}
+
+booking-container right {
+    order: 3;
+}*/
+
+@media screen and (max-width: 600px) {
+    status-column {
+        width: 100%;
+    }
+}

@@ -1,0 +1,15 @@
+﻿body {
+}
+
+classroom h1 
+{ 
+    text-align: center;
+    margin: 40px 0 120px 0;
+    font-weight: bold;
+}
+
+ul
+{
+    list-style-type: none;
+}
+

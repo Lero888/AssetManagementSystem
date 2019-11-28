@@ -111,6 +111,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\BookingStatus.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -123,18 +124,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="ClassroomBookingForm.aspx" />
+    <Content Include="ItemBorrowingForm.aspx" />
+    <Content Include="BookingStatus.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Images\Adapter.png" />
-    <Content Include="Images\building.jpg" />
-    <Content Include="Images\chair.png" />
-    <Content Include="Images\ITfacilities.png" />
-    <Content Include="Images\microphone.png" />
-    <Content Include="Images\speaker.png" />
-    <Content Include="Images\table.png" />
-    <Content Include="Images\XMUM.png" />
-    <Content Include="ItemBorrow.aspx" />
-    <Content Include="ItemIT.aspx" />
-    <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -164,6 +157,8 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Content\SiteMaster.css" />
+    <Content Include="Content\ClassroomBookingForm.css" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -245,6 +240,27 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassroomBookingForm.aspx.cs">
+      <DependentUpon>ClassroomBookingForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassroomBookingForm.aspx.designer.cs">
+      <DependentUpon>ClassroomBookingForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemBorrowingForm.aspx.cs">
+      <DependentUpon>ItemBorrowingForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemBorrowingForm.aspx.designer.cs">
+      <DependentUpon>ItemBorrowingForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookingStatus.aspx.cs">
+      <DependentUpon>BookingStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookingStatus.aspx.designer.cs">
+      <DependentUpon>BookingStatus.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
