@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="AssetManagementSystem.Login" %>
+﻿<%@ Page Title="Login Asset Management XMUM" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="AssetManagementSystem.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container" >
         &nbsp;
+        
         <div class="login" style="opacity:0.9; right: 10%; top: 24%; width: 346px; height: 291px;">
             <h4 class="text-center"><strong>Login</strong></h4>
             <div class="form-group form-group-default required">
@@ -16,7 +17,7 @@
 
             </div>
 
-            <div class="col-12 d-flex justify-content-end" style="margin-left: 250px">
+            <div class="d-flex justify-content-end" style="margin-left: 250px">
                 <asp:Button ID="LoginBtn" runat="server" Text="Login" CssClass="login-btn"/>
             </div>
         </div>

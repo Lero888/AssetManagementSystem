@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Reservation Classroom XMUM" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ClassroomBookingForm.aspx.cs" Inherits="AssetManagementSystem.ClassroomBookingForm"%>
+﻿<%@ Page Title="Reservation Classroom Booking Form XMUM" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ClassroomBookingForm.aspx.cs" Inherits="AssetManagementSystem.ClassroomBookingForm"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="classroom h1" style="text-align: center;">
         Room Reservation Details

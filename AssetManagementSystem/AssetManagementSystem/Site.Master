@@ -60,11 +60,11 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-left">
                         <li><a runat="server" href="~/" style="color: #FFFFFF;">Booking Status</a></li>
-                        <li><a runat="server" href="~/About" style="color: #FFFFFF;">Item Booking</a></li>
-                        <li><a runat="server" href="~/Contact" style="color: #FFFFFF;">Classroom Reservation</a></li>
+                        <li><a runat="server" href="ItemBorrow.aspx" style="color: #FFFFFF;">Item Booking</a></li>
+                        <li><a runat="server" href="ClassroomReservation.aspx" style="color: #FFFFFF;">Classroom Reservation</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a runat="server" href="~/Contact" style="color: #FFFFFF;">Hello, bookman.</a></li>
+                        <li><a runat="server" style="color: #FFFFFF;">Hello, <%=Session["Username"] %></a></li>
                         <li><a runat="server" href="~/Contact" style="color: #FFFFFF;">Logout</a></li>
                     </ul>
                 </div>

@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ItemBorrow.aspx.cs" Inherits="AssetManagementSystem.ItemBorrow" %>
+﻿<%@ Page Title="Item to Borrow XMUM" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ItemBorrow.aspx.cs" Inherits="AssetManagementSystem.ItemBorrow" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
         <h1 class="text-center">Item to Borrow</h1>
+        <hr style="margin-bottom: 50px;" />
         <div>
             <h3 >Please choose the items to borrow.</h3><br />
         </div>
