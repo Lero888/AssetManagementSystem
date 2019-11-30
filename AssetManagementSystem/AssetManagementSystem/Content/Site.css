@@ -120,30 +120,6 @@ textarea {
 }
 
 
-/*---------------CLASSROOM RESERVATION------------*/
-.white_slot {
-    width: 15px;
-    border: 1px solid #ccc;
-    background: white;
-}
-
-.green_slot {
-    width: 15px;
-    border: 1px solid rgb(79,176,145);
-    background: rgb(79,176,145);
-}
-
-.blue_slot {
-    width: 15px;
-    border: 1px solid #4384BF;
-    background: #4384BF;
-}
-
-.grey_slot {
-    width: 15px;
-    border: 1px solid #d1dfdf;
-    background: #d1dfdf;
-}
 
 /*---------------Row And Column Centered------------*/
 /* centered columns styles */

@@ -13,5 +13,11 @@ namespace AssetManagementSystem
         {
 
         }
+
+        protected void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Login.aspx");
+        }
     }
 }

@@ -13,15 +13,6 @@ namespace AssetManagementSystem {
     public partial class ItemIT {
         
         /// <summary>
-        /// ImageMic control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageMic;
-        
-        /// <summary>
         /// ImageSpeaker control.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,51 @@ namespace AssetManagementSystem {
         protected global::System.Web.UI.WebControls.ImageButton ImageSpeaker;
         
         /// <summary>
+        /// ImageSpeakerDisabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageSpeakerDisabled;
+        
+        /// <summary>
+        /// SpeakerQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label SpeakerQuantity;
+        
+        /// <summary>
+        /// ImageMic control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageMic;
+        
+        /// <summary>
+        /// ImageMicDisabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageMicDisabled;
+        
+        /// <summary>
+        /// MicQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MicQuantity;
+        
+        /// <summary>
         /// ImageAdapter control.
         /// </summary>
         /// <remarks>
@@ -38,5 +74,23 @@ namespace AssetManagementSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ImageAdapter;
+        
+        /// <summary>
+        /// ImageAdapterDisabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageAdapterDisabled;
+        
+        /// <summary>
+        /// AdapterQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label AdapterQuantity;
     }
 }

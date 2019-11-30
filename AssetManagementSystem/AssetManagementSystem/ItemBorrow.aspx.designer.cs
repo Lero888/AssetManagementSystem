@@ -22,6 +22,24 @@ namespace AssetManagementSystem {
         protected global::System.Web.UI.WebControls.ImageButton ImageTable;
         
         /// <summary>
+        /// ImageTableDisabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageTableDisabled;
+        
+        /// <summary>
+        /// TableQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TableQuantity;
+        
+        /// <summary>
         /// ImageChair control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,24 @@ namespace AssetManagementSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton ImageChair;
+        
+        /// <summary>
+        /// ImageChairDisabled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageChairDisabled;
+        
+        /// <summary>
+        /// ChairQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ChairQuantity;
         
         /// <summary>
         /// ImageITFacilities control.

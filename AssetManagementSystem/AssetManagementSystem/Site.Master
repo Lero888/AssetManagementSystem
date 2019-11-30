@@ -73,7 +73,8 @@
                     </ul>
                     <ul id="nav-title2" class="nav navbar-nav navbar-right">
                         <li><a runat="server" style="color: #FFFFFF;">Hello, <%=Session["Username"] %></a></li>
-                        <li><a runat="server" href="~/Contact" style="color: #FFFFFF;">Logout</a></li>
+                        <li><asp:LinkButton ID="LogoutBtn" runat="server" style="color: #FFFFFF;" OnClick="LogoutBtn_Click">Logout</asp:LinkButton>
+                            </></li>
                     </ul>
                 </div>
             </div>
