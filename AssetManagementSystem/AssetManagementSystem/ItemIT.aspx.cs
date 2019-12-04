@@ -14,12 +14,6 @@ namespace AssetManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (Session["username"] == null)
-            {
-                Response.Redirect("Login.aspx?postbackURL=ItemIT");
-            }
-
             checkQuantity();
             int squantity = Convert.ToInt32(SpeakerQuantity.Text);
             int mquantity = Convert.ToInt32(MicQuantity.Text);
@@ -70,7 +64,7 @@ namespace AssetManagementSystem
                    "uid=" + Credential.UID + "; " +
                    "password=" + Credential.PASSWORD + ";");
             SqlCommand cmd = new SqlCommand(
-                "select ItemID, Quantity from Items where ItemID=3 or ItemID=4 or ItemID=5", conn);
+                "select ItemID,QuantityLeft from Items where ItemID=3 or ItemID=4 or ItemID=5", conn);
             conn.Open();
             SqlDataAdapter ada = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -104,17 +98,17 @@ namespace AssetManagementSystem
 
         protected void ImageSpeaker_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("ItemBorrowingForm.aspx?ItemID=3");
+            Response.Redirect("ItemBorrowingForm.aspx");
         }
 
         protected void ImageMic_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("ItemBorrowingForm.aspx?ItemID=4");
+            Response.Redirect("ItemBorrowingForm.aspx");
         }
 
         protected void ImageAdapter_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("ItemBorrowingForm.aspx?ItemID=5");
+            Response.Redirect("ItemBorrowingForm.aspx");
         }
     }
 }

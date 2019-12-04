@@ -34,8 +34,6 @@ namespace AssetManagementSystem
                 "database=" + Credential.DATABASE + "; " +
                 "uid=" + Credential.UID + "; " +
                 "password=" + Credential.PASSWORD + ";");
-            
-            conn.Open();
 
             SqlCommand cmd = new SqlCommand(
                 "select * from Users where Username=@UN and Password=@PWD", conn);
@@ -55,22 +53,6 @@ namespace AssetManagementSystem
             {
                 Session["username"] = tbUsername.Text;
                 Session["uid"] = ds.Tables[0].Rows[0][0];
-
-                SqlCommand cmd_delete = new SqlCommand(
-                    "delete from Session", conn);
-
-                cmd_delete.ExecuteNonQuery();
-                cmd_delete.Dispose();
-
-                SqlCommand cmd_session = new SqlCommand(
-                    "insert into Session(username, uid) values(@username,  @UID)", conn);
-                
-                cmd_session.Parameters.Add("@username", SqlDbType.VarChar, 100).Value = Session["username"];
-                cmd_session.Parameters.Add("@UID", SqlDbType.VarChar, 100).Value = Session["uid"];
-
-                cmd_session.ExecuteNonQuery();
-                cmd_session.Dispose();
-
                 if (Request["postbackURL"] == null)
                     Response.Redirect("BookingStatus.aspx");
                 else

@@ -28,10 +28,6 @@
         #nav-title, #nav-title2 li {
             padding-top: 5px;
         }
-
-        body {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
     </style>
 
 </head>
@@ -65,14 +61,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="BookingStatus.aspx">
+                    <a class="navbar-brand" runat="server" href="~/">
                         <img src="Images/logo.png" class="auto-style1" />                        
                     </a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul id="nav-title" class="nav navbar-nav navbar-left">
-                        <li><a runat="server" href="BookingStatus.aspx" style="color: #FFFFFF;">Reservation Status</a></li>
-                        <li><a runat="server" href="ItemBorrow.aspx" style="color: #FFFFFF;">Item Reservation</a></li>
+                        <li><a runat="server" href="~/" style="color: #FFFFFF;">Booking Status</a></li>
+                        <li><a runat="server" href="ItemBorrow.aspx" style="color: #FFFFFF;">Item Booking</a></li>
                         <li><a runat="server" href="ClassroomReservation.aspx" style="color: #FFFFFF;">Classroom Reservation</a></li>
                     </ul>
                     <ul id="nav-title2" class="nav navbar-nav navbar-right">

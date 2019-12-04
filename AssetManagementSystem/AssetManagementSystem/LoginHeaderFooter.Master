@@ -55,7 +55,7 @@
         <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #02234E">
             <div id="login-logo" class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" runat="server" href="Login.aspx">
+                    <a class="navbar-brand" runat="server" href="~/">
                         <img src="Images/logo.png" class="auto-style1" />                        
                     </a>
                 </div>
