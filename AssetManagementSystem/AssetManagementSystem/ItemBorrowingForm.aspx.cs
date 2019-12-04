@@ -141,7 +141,7 @@ namespace AssetManagementSystem
             DataSet ds = new DataSet();
             ada.Fill(ds);
 
-            int Amount = 0; ;
+            int Amount = 0; 
 
             if (ds.Tables[0].Rows.Count != 0)
             {
