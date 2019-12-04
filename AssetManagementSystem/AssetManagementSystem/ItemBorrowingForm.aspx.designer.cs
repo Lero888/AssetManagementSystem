@@ -15,22 +15,85 @@ namespace AssetManagementSystem
     {
 
         /// <summary>
-        /// Calendar1 control.
+        /// ImageItem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        protected global::System.Web.UI.WebControls.Image ImageItem;
 
         /// <summary>
-        /// Calendar2 control.
+        /// LbItem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar2;
+        protected global::System.Web.UI.WebControls.Label LbItem;
+
+        /// <summary>
+        /// LbDepartment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDepartment;
+
+        /// <summary>
+        /// LbDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDesc;
+
+        /// <summary>
+        /// CalendarDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar CalendarDate;
+
+        /// <summary>
+        /// LbCalander control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbCalander;
+
+        /// <summary>
+        /// LbDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDate;
+
+        /// <summary>
+        /// LbDateResult control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbDateResult;
+
+        /// <summary>
+        /// LbAmount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbAmount;
 
         /// <summary>
         /// TbTel control.
@@ -60,6 +123,15 @@ namespace AssetManagementSystem
         protected global::System.Web.UI.WebControls.TextBox TbAmount;
 
         /// <summary>
+        /// LbAmount1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbAmount1;
+
+        /// <summary>
         /// AmtValid control.
         /// </summary>
         /// <remarks>
@@ -67,6 +139,15 @@ namespace AssetManagementSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator AmtValid;
+
+        /// <summary>
+        /// CustomAmt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomAmt;
 
         /// <summary>
         /// TbUsage control.
@@ -94,5 +175,14 @@ namespace AssetManagementSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnSave;
+
+        /// <summary>
+        /// LbSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LbSave;
     }
 }

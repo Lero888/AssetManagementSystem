@@ -24,6 +24,12 @@
             }
         }
     </style>
+    <script type="text/javascript">
+        function validateDate() {
+            if ('<%= CalendarDate.SelectedDate.Date ==DateTime.MinValue.Date  %>' == "True")
+                alert('Select a date');
+        }
+    </script>
 
     <div class ="row" style="margin-top: 40px;">
             <div class="col-md-12 text-center">
@@ -36,15 +42,24 @@
     <div class="row">
         <div class="col-md-4 text-center">
             <div class="row">
-                <img src="Images/Adapter.png" alt="Item" />
+                <asp:Image ID="ImageItem" ImageUrl="~/" runat="server" />
             </div>
                 
             <div class="row" style="margin-top: 30px;">
                 <div class="col-md-5 text-right">
-                    <h4>Item: </h4>
+                    <h4><b>Item: </b></h4>
                 </div>
-                <div class="col-md-7 text-left" style="margin-top: 10px;">
+                <div class="col-md-7 text-left">
+                    <h4><asp:Label ID="LbItem" runat="server" Text="Label"></asp:Label></h4>
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="col-md-5 text-right">
+                    <h4><b>Department: </b></h4>
+                </div>
+                <div class="col-md-7 text-left">
+                    <h4><asp:Label ID="LbDepartment" runat="server" Text="Label"></asp:Label></h4>
                 </div>
             </div>
         </div>
@@ -52,28 +67,50 @@
         <div class="col-md-8">
             <div class="row" style="padding-top: 20px;">
                 <div class="col-md-4 text-right">
-                    <h4>Description: </h4>
+                    <h4><b>Description: </b></h4>
                 </div>
                 <div class="col-md-8 text-left" style="margin-top: 10px;">
-
+                    <asp:Label ID="LbDesc" runat="server" Text="Label"></asp:Label>
                 </div>
             </div>  
         
             <div class="row">
                 <div class="col-md-4 text-right">
-                    <h4>Caution: </h4>
+                    <h4><b>Date: </b></h4>
                 </div>
-                <div class="col-md-8 text-left" style="margin-top: 10px;">
-                
+                <div class="col-md-4 text-left" style="margin-top: 10px;">
+
+                    <asp:Calendar ID="CalendarDate" OnSelectionChanged="Date_Selection_Changed" runat="server">
+                        <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />  
+                        <SelectorStyle BackColor="#FFCC66" />  
+                        <OtherMonthDayStyle ForeColor="#CC9966" />  
+                        <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />  
+                    </asp:Calendar>
+                    <asp:Label ID="LbCalander" runat="server" Visible="false" ForeColor="Red" Text=""></asp:Label>
+<%--                    <asp:CustomValidator ID="dateCustVal" 
+                        OnServerValidate="DateCustVal_Validate" 
+                        runat="server" 
+                        Display="Dynamic" 
+                        ErrorMessage="Please select a valid date.">
+                    </asp:CustomValidator>    --%>                
                 </div>
-            </div>  
+                <div class="col-md-4">
+                    <div class="row" style="margin-top: 50px; margin-bottom: 30px;">
+                        <div class="col-md-12">
+                            <asp:Label ID="LbDate" runat="server" Text="Selected Date: " Font-Bold="True"></asp:Label>
+                            <asp:Label ID="LbDateResult" runat="server" Text=""></asp:Label>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div> 
 
             <div class="row">
                 <div class="col-md-4 text-right">
-                    <h4>Amount Available:</h4>
+                    <h4><b>Amount Available: </b></h4>
                 </div>
                 <div class="col-md-8 text-left" style="margin-top: 10px;">
-                
+                    <asp:Label ID="LbAmount" runat="server" Text="Please select date to display."></asp:Label>
                 </div>
             </div>
         </div>
@@ -82,29 +119,7 @@
     <h4 style="font-weight: 800; padding-top: 40px;">Please fill in the following details.</h4>
     <hr style="padding-bottom: 30px" />
 
-    <div class="row">
-        <div class="col-md-2 text-left">
-            <h4>Date(Start): </h4>
-        </div>
-        <div class="col-md-10 text-left" style="margin-top: 10px;">
-            <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-            <%--<asp:CustomValidator ID="DateStartValidator" runat="server" ErrorMessage="Please select a valid start date." ControlToValidate="Calendar1" OnServerValidate="DateStartValidator_ServerValidate"></asp:CustomValidator>--%>           
-            <%--<asp:RangeValidator ID="DateStartValidator1" runat="server" controltovalidate="Calendar1" type="Date" minimumvalue="DateTime.Now.Date" maximumvalue="DateTime.Now.AddDays(30)" ErrorMessage="Please select a valid start date."></asp:RangeValidator>--%>
-        </div>
-    </div>
-        
-    <div class="row">
-        <div class="col-md-2 text-left">
-            <h4>Date(End): </h4>
-        </div>
-        <div class="col-md-10 text-left" style="margin-top: 10px;">
-            <asp:Calendar ID="Calendar2" runat="server"></asp:Calendar>
-            <%--<asp:CustomValidator ID="DateEndValidator" runat="server" ErrorMessage="Please select a valid end date." ControlToValidate="Calender2" OnServerValidate="DateEndValidator_ServerValidate"></asp:CustomValidator>--%>
-            <%--<asp:RangeValidator ID="DateEndValidator1" runat="server" controltovalidate="Calendar2" type="Date" minimumvalue="DateTime.Now.Date" maximumvalue="DateTime.Now.AddDays(5)" ErrorMessage="Please select a valid start date."></asp:RangeValidator>--%>
-
-        </div>
-    </div>
-
+      
     <div class="row">
         <div class="col-md-2 text-left">
             <h4>Tel No.: </h4>
@@ -121,7 +136,9 @@
         </div>
         <div class="col-md-10 text-left" style="margin-top: 10px;">
             <asp:TextBox ID="TbAmount" runat="server" Width="310px"></asp:TextBox>
+            <asp:Label ID="LbAmount1" runat="server" Visible="false" ForeColor="Red" Text=""></asp:Label>
             <asp:RequiredFieldValidator ID="AmtValid" runat="server" ErrorMessage="Amount is required" ControlToValidate="TbAmount"  ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="CustomAmt" runat="server" ErrorMessage="" ForeColor="Red" OnServerValidate="Amount_Validate" ControlToValidate="TbAmount"></asp:CustomValidator>
         </div>
     </div>
 
@@ -137,8 +154,15 @@
 
     <div class="row">
         <div class="col-md-12 text-left" style="padding-bottom: 30px;">
-            <asp:Button ID="BtnSave" runat="server" Text="Save" CssClass="login-btn" style="margin-top: 20px;" OnClick="BtnSave_Click" />
+            <asp:Button ID="BtnSave" runat="server" Text="Save" CssClass="login-btn" OnClientClick="validateDate()" style="margin-top: 20px;" OnClick="BtnSave_Click" />
+            <asp:Label ID="LbSave" runat="server" Visible="false" ForeColor="Red" Text="Label"></asp:Label>
         </div>
     </div>  
+
+    <div class="row">
+        <div class="col-md-12 text-left" style="padding-bottom: 30px;">
+            
+        </div>
+    </div> 
 </asp:Content>
 
