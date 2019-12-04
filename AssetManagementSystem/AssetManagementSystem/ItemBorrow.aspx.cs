@@ -52,7 +52,7 @@ namespace AssetManagementSystem
                    "uid=" + Credential.UID + "; " +
                    "password=" + Credential.PASSWORD + ";");
             SqlCommand cmd = new SqlCommand(
-                "select ItemID,QuantityLeft from Items where ItemID=1 or ItemID=2", conn);
+                "select ItemID, Quantity from Items where ItemID=1 or ItemID=2", conn);
             conn.Open();
             SqlDataAdapter ada = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -77,12 +77,12 @@ namespace AssetManagementSystem
 
         protected void ImageTable_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("ItemBorrowingForm.aspx");
+            Response.Redirect("ItemBorrowingForm.aspx?ItemID=1");
         }
 
         protected void ImageChair_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("ItemBorrowingForm.aspx");
+            Response.Redirect("ItemBorrowingForm.aspx?ItemID=2");
         }
     }
 }
