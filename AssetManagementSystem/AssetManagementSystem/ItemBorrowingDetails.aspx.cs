@@ -22,6 +22,7 @@ namespace AssetManagementSystem
             item_data();
 
             item_borrow();
+
         }
 
         protected void item_data()
@@ -54,6 +55,9 @@ namespace AssetManagementSystem
                 ImageItem.ImageUrl = Image;
 
             }
+
+            if (getDepartment() == "IT") LbLocation.Text = "B1-102";
+            else LbLocation.Text = "B1-G11";
         }
 
         protected void item_borrow()
@@ -205,7 +209,7 @@ namespace AssetManagementSystem
                 {
                     LbPINRetrieve.Visible = true;
                     LbPINRetrieve.Text = "PIN Correct. Please retrieve the item.";
-                    //UpdateToRetrieved();
+                    UpdateToRetrieved();
                 }
                 else if(status == "Retrieved")
                 {
@@ -228,6 +232,7 @@ namespace AssetManagementSystem
             {
                 LbPINRetrieve.Visible = true;
                 LbPINRetrieve.Text = "PIN Incorrect. Please fill in again";
+                
             }
         }
 
@@ -256,12 +261,12 @@ namespace AssetManagementSystem
             String PIN_correct = getPIN();
             String status = getStatus();
 
-            if (TbPINRetrieve.Text == PIN_correct)
+            if (TbPINReturn.Text == PIN_correct)
             {
                 if (status == "Retrieved")
                 {
                     LbPINReturn.Text = "PIN Correct. Please make sure the item is returned.";
-                    //UpdateToReturned();
+                    UpdateToReturned();                    
                 }
                 else if (status == "Borrowed")
                 {
@@ -274,7 +279,7 @@ namespace AssetManagementSystem
                 else
                 {
                     LbPINReturn.Text = "PIN Correct. Please make sure the item is returned.";
-                    //UpdateToReturned();
+                    UpdateToReturned();
                 }
 
             }

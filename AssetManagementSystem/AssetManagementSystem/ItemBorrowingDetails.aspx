@@ -58,6 +58,15 @@
                 </div>
             </div>  
 
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <h4>Retrieved At: </h4>
+                </div>
+                <div class="col-md-8 text-left" style="margin-top: 10px;">
+                    <asp:Label ID="LbLocation" runat="server" Text=""></asp:Label>
+                </div>
+            </div>  
+
             <div class="row"">
                 <div class="col-md-4 text-right">
                     <h4>Description: </h4>
@@ -113,7 +122,7 @@
                     <h5 style="font-weight: 600; margin-top: 15px;">PIN (Retrieve Item): </h5>
                 </div>
                 <div class="col-md-6 text-left" style="margin-top: 10px;">
-                    <asp:TextBox ID="TbPINRetrieve" runat="server" autocomplete="off" Width="210px"></asp:TextBox>
+                    <asp:TextBox ID="TbPINRetrieve" runat="server" autocomplete="off" Width="210px" TextMode="Password"></asp:TextBox>
                 </div>
             </div>
 
@@ -136,7 +145,7 @@
                     <h5 style="font-weight: 600; margin-top: 15px;">PIN (Return Item): </h5>
                 </div>
                 <div class="col-md-6 text-left" style="margin-top: 10px;">
-                    <asp:TextBox ID="TbPINReturn" runat="server" autocomplete="off" Width="210px"></asp:TextBox>
+                    <asp:TextBox ID="TbPINReturn" runat="server" autocomplete="off" Width="210px" TextMode="Password"></asp:TextBox>
                 </div>
             </div>
 

@@ -14,6 +14,11 @@ namespace AssetManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["username"] == null)
+            {
+                Response.Redirect("Login.aspx?postbackURL=ItemBorrow");
+            }
+
             checkQuantity();
             int tquantity = Convert.ToInt32(TableQuantity.Text);
             int cquantity = Convert.ToInt32(ChairQuantity.Text);

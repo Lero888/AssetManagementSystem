@@ -101,10 +101,11 @@ namespace AssetManagementSystem
                "uid=" + Credential.UID + "; " +
                "password=" + Credential.PASSWORD + ";");
             SqlCommand cmd = new SqlCommand(
-                "insert into ClassroomBorrow(TimeID,UserID,Usage)Values(@TID,@UID,@USG); ", conn);
+                "insert into ClassroomBorrow(TimeID,UserID,TelNo,Usage)Values(@TID,@UID,@Tel,@USG); ", conn);
             conn.Open();
             cmd.Parameters.Add("@TID", SqlDbType.Int, 100).Value = timeid;
             cmd.Parameters.Add("@UID", SqlDbType.Int, 100).Value = userid;
+            cmd.Parameters.Add("@Tel", SqlDbType.VarChar, 100).Value = Tel.Text;
             cmd.Parameters.Add("@USG", SqlDbType.VarChar, 100).Value = UsageTxt.Text;
 
             cmd.ExecuteNonQuery();
