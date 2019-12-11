@@ -86,13 +86,7 @@
                         <OtherMonthDayStyle ForeColor="#CC9966" />  
                         <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />  
                     </asp:Calendar>
-                    <asp:Label ID="LbCalander" runat="server" Visible="false" ForeColor="Red" Text=""></asp:Label>
-<%--                    <asp:CustomValidator ID="dateCustVal" 
-                        OnServerValidate="DateCustVal_Validate" 
-                        runat="server" 
-                        Display="Dynamic" 
-                        ErrorMessage="Please select a valid date.">
-                    </asp:CustomValidator>    --%>                
+                    <asp:Label ID="LbCalander" runat="server" Visible="false" ForeColor="Red" Text=""></asp:Label>           
                 </div>
                 <div class="col-md-4">
                     <div class="row" style="margin-top: 50px; margin-bottom: 30px;">

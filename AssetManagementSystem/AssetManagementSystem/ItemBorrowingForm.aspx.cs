@@ -80,6 +80,7 @@ namespace AssetManagementSystem
             DataSet ds = new DataSet();
             ada.Fill(ds);
 
+            //Output the quantity left if the quantity is available
             if (ds.Tables[0].Rows.Count != 0)
             {
                 LbAmount.Text = Convert.ToString((int)ds.Tables[0].Rows[0][0]);
@@ -151,7 +152,7 @@ namespace AssetManagementSystem
             return Amount;
         }
 
-                
+        //Update quantity when the item is borrowed                
         protected Boolean updateItemQuantity(String ItemID)
         {
             SqlConnection conn = new SqlConnection(
@@ -182,9 +183,9 @@ namespace AssetManagementSystem
         {
             String ItemID = Request.QueryString["ItemID"];
 
-            //Check if the page is valid (not valid cause by validator)
+            //Check if the date selected is valid
             calendarCheck();
-
+            //Check if the page is valid (not valid cause by validator)
             Page.Validate();
 
             if (Page.IsValid && calendarCheck())
@@ -216,33 +217,6 @@ namespace AssetManagementSystem
                 LbSave.Text = "Input invalid.";
             }
         }
-
-        //Validator
-        //protected void DateCustVal_Validate(object source, ServerValidateEventArgs args)
-        //{
-        //    if (args.Value != null)
-        //    {
-        //        DateTime minDate = DateTime.Now.Date;
-        //        DateTime maxDate = DateTime.Now.AddDays(15);
-        //        DateTime selecteddate = CalendarDate.SelectedDate.Date;
-
-        //        if (selecteddate < minDate || selecteddate > maxDate)
-        //        {
-        //            LbCalander.Visible = true;
-        //            LbCalander.Text = "Please select a valid date (15 days from now).";
-        //            args.IsValid = false;
-        //        }
-        //        else args.IsValid = true;
-
-        //    }
-        //    else
-        //    {
-        //        LbCalander.Visible = true;
-        //        LbCalander.Text = "Please select a date.";
-        //        args.IsValid = false;
-        //    }
-        //    args.IsValid = true;
-        //}
 
         protected void Amount_Validate(object source, ServerValidateEventArgs args)
         {

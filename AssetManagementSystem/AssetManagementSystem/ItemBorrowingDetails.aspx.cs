@@ -19,6 +19,7 @@ namespace AssetManagementSystem
                 Response.Redirect("Login.aspx?postbackURL=BookingStatus");
             }
 
+            //Load Details in the Page
             item_data();
 
             item_borrow();
@@ -177,6 +178,7 @@ namespace AssetManagementSystem
             return status;
         }
 
+        //This method is called when the PIN is correctly entered in Retrieve Textbox
         protected void UpdateToRetrieved()
         {
             String ItemBorrowID = Request.QueryString["ItemBorrowID"];
@@ -197,7 +199,7 @@ namespace AssetManagementSystem
 
         }
 
-        //Confirm Button
+        //Confirm Button (Retrieve)
         protected void Button1_Click(object sender, EventArgs e)
         {
             String PIN_correct = getPIN();
@@ -236,6 +238,7 @@ namespace AssetManagementSystem
             }
         }
 
+        //This method is called when the PIN is correctly filled in return textbox
         protected void UpdateToReturned()
         {
             String ItemBorrowID = Request.QueryString["ItemBorrowID"];
@@ -256,6 +259,8 @@ namespace AssetManagementSystem
 
         }
 
+
+        //Confirm button (Return)
         protected void Button2_Click(object sender, EventArgs e)
         {
             String PIN_correct = getPIN();
