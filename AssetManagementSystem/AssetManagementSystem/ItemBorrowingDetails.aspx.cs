@@ -16,7 +16,7 @@ namespace AssetManagementSystem
         {
             if (Session["username"] == null)
             {
-                Response.Redirect("Login.aspx?postbackURL=ItemBorrowingDetails");
+                Response.Redirect("Login.aspx?postbackURL=BookingStatus");
             }
 
             item_data();
