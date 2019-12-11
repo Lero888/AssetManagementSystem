@@ -14,6 +14,10 @@ namespace AssetManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["username"] == null)
+                Response.Redirect("Login.aspx?postbackURL=ClassroomReservation");
+
             string RName = Request.QueryString["Name"];
             string RDate = Request.QueryString["DT"];
             string RTime = Request.QueryString["TM"];

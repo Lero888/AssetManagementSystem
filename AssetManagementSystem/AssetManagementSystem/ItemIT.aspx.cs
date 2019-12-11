@@ -78,20 +78,21 @@ namespace AssetManagementSystem
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-               
+                //if the itemID in the first row is speaker
                 if ((int)ds.Tables[0].Rows[0][0] == 3)
                 {
                     int quantity = (int)ds.Tables[0].Rows[0][1];
                     SpeakerQuantity.Text = quantity.ToString();
                 }
 
+                //if the itemID in the second row is mic
                 if ((int)ds.Tables[0].Rows[1][0] == 4)
                 {
                     int quantity = (int)ds.Tables[0].Rows[1][1];
                     MicQuantity.Text = quantity.ToString();
                 }
 
-
+                //if the itemID in the third row is adapter
                 if ((int)ds.Tables[0].Rows[2][0] == 5)
                 {
                     int quantity = (int)ds.Tables[0].Rows[2][1];

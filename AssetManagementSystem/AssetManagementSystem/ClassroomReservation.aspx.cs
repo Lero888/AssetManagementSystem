@@ -15,6 +15,7 @@ namespace AssetManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //when the page is getting loaded for the first time
             if (!IsPostBack)
             {
                 fillDropDown();
@@ -26,6 +27,7 @@ namespace AssetManagementSystem
 
         }
 
+        //generate today's dates and the 10 upcoming dates
         private void fillDropDown()
         {
             List<DateTime> arrList = new List<DateTime>();
@@ -34,11 +36,9 @@ namespace AssetManagementSystem
                 arrList.Add(DateTime.Today.AddDays(i));
                 ListItem newitem = new ListItem(arrList[i].Date.ToString("yyyy-MM-dd"));
                 DropDownList1.Items.Add(newitem);
-            }
-           // generatedData();
+            };
 
-           
-        // DropDownList1.DataBind();
+        
               
         }
 
@@ -77,7 +77,7 @@ namespace AssetManagementSystem
             SqlCommand cmd = new SqlCommand(
                 "select Time.Status, Classrooms.ClassName from Time,Classrooms " +
                 "where Time.ClassroomDate=@DT and Time.ClassroomTime=@TM and Classrooms.ClassName=@CN and Classrooms.ClassroomID=Time.ClassroomID", conn);
-           // conn.Open();
+           
             cmd.Parameters.Add("@DT", SqlDbType.Date, 100).Value = DropDownList1.Text;
             cmd.Parameters.Add("@TM", SqlDbType.VarChar, 100).Value = DropDownList2.Text;
             cmd.Parameters.Add("@CN", SqlDbType.VarChar, 100).Value = DropDownList4.Text;
@@ -98,14 +98,6 @@ namespace AssetManagementSystem
                     Response.Redirect("ClassroomReservationForm.aspx?Name="+DropDownList4.Text+"&&DT="+DropDownList1.Text+"&&TM="+DropDownList2.Text);
                 }
             }
-            else
-            {
-                //Response.Write("Error");
-                Response.Write(DropDownList4.Text);
-                
-            }
-           
-            
 
         }
 

@@ -41,9 +41,11 @@ namespace AssetManagementSystem
                 "select * from Users where Username=@UN and Password=@PWD", conn);
             cmd.Parameters.Add("@UN", SqlDbType.VarChar, 100).Value = tbUsername.Text;
             cmd.Parameters.Add("@PWD", SqlDbType.VarChar, 100).Value = tbPassword.Text;
+
+            // Build and fill in a DataSet with data from database using a DataAdapter
             SqlDataAdapter ada = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            ada.Fill(ds);
+            DataSet ds = new DataSet(); 
+            ada.Fill(ds); 
 
             if (ds.Tables[0].Rows.Count == 0)
             {

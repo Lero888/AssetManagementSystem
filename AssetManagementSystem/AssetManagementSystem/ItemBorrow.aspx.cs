@@ -65,12 +65,14 @@ namespace AssetManagementSystem
 
             if (ds.Tables[0].Rows.Count > 0)
             {
+                //if the itemID in the first row is table
                 if ((int)ds.Tables[0].Rows[0][0] == 1)
                 {
                     int quantity= (int)ds.Tables[0].Rows[0][1];
                     TableQuantity.Text = quantity.ToString();
                 }
 
+                //if the itemID in the second row is chair
                 if ((int)ds.Tables[0].Rows[1][0] == 2)
                 {
                     int quantity = (int)ds.Tables[0].Rows[1][1];
